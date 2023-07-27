@@ -109,7 +109,7 @@ const TeamGenerator = () => {
           PEMAEN {countplay.length}
         </div>
         <p className="number-of-teams">
-          Berapa Tim
+          Berapa Tim Pingpong
           <input
             type="number"
             id="num-teams"
