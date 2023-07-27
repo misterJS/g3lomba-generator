@@ -69,7 +69,7 @@ const TeamGenerator = () => {
             marginLeft: "5px",
           }}
         >
-          {countplay.length}
+          PEMAEN {countplay.length}
         </div>
         <p className="number-of-teams">
           Berapa Tim
