@@ -1,14 +1,36 @@
+import Lottie from "lottie-react";
 import React, { useEffect, useState } from "react";
+import useSound from "use-sound";
 import "./TeamGenerator.css";
+import LotteryAnimation from "./lottery.json";
+import lotterySfx from "./lottery.mp3";
 import { daftarBuah } from "./mock";
+import slotSfx from "./slot.mp3";
+import winSfx from "./win.mp3";
 
 const TeamGenerator = () => {
   const [players, setPlayers] = useState("");
   const [numTeams, setNumTeams] = useState(13);
   const [teams, setTeams] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const [playSlot] = useSound(slotSfx, {
+    interrupt: true,
+  });
+
+  const [play, { stop }] = useSound(lotterySfx, {
+    interrupt: true,
+  });
+
+  const [playWin] = useSound(winSfx, {
+    interrupt: true,
+  });
+
+  playSlot();
 
   const generateTeams = () => {
     // Process the player names and generate teams
+    setLoading(true);
     let processedPlayers = players.split(/\r?\n/);
     processedPlayers = processedPlayers.filter((player) =>
       /[a-z]/i.test(player)
@@ -32,6 +54,11 @@ const TeamGenerator = () => {
 
     // Update the state to trigger a re-render and display the teams with animation
     setTeams(teamsArray);
+
+    setTimeout(() => {
+      setLoading(false);
+      playWin();
+    }, 15000);
   };
 
   useEffect(() => {
@@ -42,6 +69,14 @@ const TeamGenerator = () => {
       teamsElements[i].style.animationDelay = `${i * 2}s`; // Menambahkan delay sebelum animasi muncul
     }
   }, [teams]);
+
+  useEffect(() => {
+    if (loading) {
+      play();
+    } else {
+      stop();
+    }
+  }, [loading]);
 
   const countplay = players.split(/\r?\n/);
 
@@ -88,13 +123,17 @@ const TeamGenerator = () => {
       <div className="teams-list">
         <h2>Hasil</h2>
         <p>- Tim bakal muncul dimarih -</p>
-        <div className="teams">
-          {teams.map((team, index) => (
-            <p key={index} className="team-item">
-              TIM {daftarBuah[index]}: {team.join(", ")}
-            </p>
-          ))}
-        </div>
+        {loading ? (
+          <Lottie animationData={LotteryAnimation} />
+        ) : (
+          <div className="teams">
+            {teams.map((team, index) => (
+              <p key={index} className="team-item">
+                TIM {daftarBuah[index]}: {team.join(", ")}
+              </p>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
