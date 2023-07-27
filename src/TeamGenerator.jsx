@@ -4,7 +4,7 @@ import { daftarBuah } from "./mock";
 
 const TeamGenerator = () => {
   const [players, setPlayers] = useState("");
-  const [numTeams, setNumTeams] = useState(2);
+  const [numTeams, setNumTeams] = useState(13);
   const [teams, setTeams] = useState([]);
 
   const generateTeams = () => {
