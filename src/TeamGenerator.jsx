@@ -26,8 +26,6 @@ const TeamGenerator = () => {
     interrupt: true,
   });
 
-  playSlot();
-
   const generateTeams = () => {
     // Process the player names and generate teams
     setLoading(true);
@@ -80,8 +78,12 @@ const TeamGenerator = () => {
 
   const countplay = players.split(/\r?\n/);
 
+  const handleClick = () => {
+    playSlot();
+  };
+
   return (
-    <div className="teamgen-wrapper">
+    <div className="teamgen-wrapper" onClick={handleClick}>
       <div className="leftdiv">
         <h2>List Pemain</h2>
         <label htmlFor="players">- Tulis namanya dibawah -</label>
