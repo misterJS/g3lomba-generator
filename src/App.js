@@ -9,6 +9,14 @@ function App() {
       <p style={{ textAlign: "center" }}>by dion rt ganteng</p>
       <div className="teamgen-container">
         <TeamGenerator />
+        <iframe
+          src="https://challonge.com/g3pingpong/module"
+          width="100%"
+          height="500"
+          frameborder="0"
+          scrolling="auto"
+          allowtransparency="true"
+        ></iframe>
       </div>
     </div>
   );
