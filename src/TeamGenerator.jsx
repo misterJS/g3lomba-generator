@@ -28,7 +28,7 @@ const TeamGenerator = () => {
       curTeam = (curTeam + 1) % numberOfTeam;
     }
 
-    teamsArray.push([['Pak Budi'], ['Pak Chris']])
+    teamsArray.push([["Pak Budi"], ["Pak Chris"]]);
 
     // Update the state to trigger a re-render and display the teams with animation
     setTeams(teamsArray);
@@ -43,13 +43,13 @@ const TeamGenerator = () => {
     }
   }, [teams]);
 
+  const countplay = players.split(/\r?\n/);
+
   return (
     <div className="teamgen-wrapper">
       <div className="leftdiv">
         <h2>List Pemain</h2>
-        <label htmlFor="players">
-          - Tulis namanya dibawah -
-        </label>
+        <label htmlFor="players">- Tulis namanya dibawah -</label>
         <textarea
           spellCheck="false"
           id="players"
@@ -58,6 +58,19 @@ const TeamGenerator = () => {
           value={players}
           onChange={(e) => setPlayers(e.target.value)}
         />
+        <div
+          style={{
+            background: "red",
+            width: "fit-content",
+            padding: "5px",
+            borderRadius: "10em",
+            position: "absolute",
+            marginTop: "-60px",
+            marginLeft: "5px",
+          }}
+        >
+          {countplay.length}
+        </div>
         <p className="number-of-teams">
           Berapa Tim
           <input
