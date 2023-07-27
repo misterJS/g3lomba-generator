@@ -66,7 +66,7 @@ const TeamGenerator = () => {
             borderRadius: "10em",
             position: "absolute",
             marginTop: "-60px",
-            marginLeft: "8px",
+            marginLeft: "140px",
           }}
         >
           PEMAEN {countplay.length}
