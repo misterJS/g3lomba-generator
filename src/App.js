@@ -14,7 +14,7 @@ function App() {
           <iframe
             src="https://challonge.com/g3pingpongtournament/module"
             width="100%"
-            height="100%"
+            height="1000"
             frameborder="0"
             scrolling="auto"
             allowtransparency="true"
