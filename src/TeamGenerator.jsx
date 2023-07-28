@@ -33,9 +33,6 @@ const TeamGenerator = () => {
     processedPlayers = processedPlayers.filter((player) =>
       /[a-z]/i.test(player)
     );
-    processedPlayers = processedPlayers.filter(
-      (player) => player !== "Pak Budi" && player !== "Pak Chris"
-    );
     const numberOfTeam = numTeams - 1;
     const teamsArray = Array.from({ length: numberOfTeam }, () => []);
 
@@ -47,8 +44,6 @@ const TeamGenerator = () => {
 
       curTeam = (curTeam + 1) % numberOfTeam;
     }
-
-    teamsArray.push([["Pak Budi"], ["Pak Chris"]]);
 
     // Update the state to trigger a re-render and display the teams with animation
     setTeams(teamsArray);
