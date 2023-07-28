@@ -33,7 +33,7 @@ const TeamGenerator = () => {
     processedPlayers = processedPlayers.filter((player) =>
       /[a-z]/i.test(player)
     );
-    const numberOfTeam = numTeams - 1;
+    const numberOfTeam = numTeams;
     const teamsArray = Array.from({ length: numberOfTeam }, () => []);
 
     let curTeam = 0;
