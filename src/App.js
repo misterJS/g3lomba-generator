@@ -9,7 +9,7 @@ function App() {
       <p style={{ textAlign: "center" }}>by dion rt ganteng</p>
       <div className="teamgen-container">
         <TeamGenerator />
-        <h1 className="app-title">Bagan Tim</h1>
+        {/* <h1 className="app-title">Bagan Tim</h1> */}
         {/* <div style={{ marginTop: 10 }}>
           <iframe
             src="https://challonge.com/g3pingpongtournament/module"
