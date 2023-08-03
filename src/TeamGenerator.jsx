@@ -51,7 +51,7 @@ const TeamGenerator = () => {
     setTimeout(() => {
       setLoading(false);
       playWin();
-    }, 15000);
+    }, 150000);
   };
 
   useEffect(() => {
