@@ -5,12 +5,12 @@ import TeamGenerator from "./TeamGenerator";
 function App() {
   return (
     <div>
-      <h1 className="app-title">PINGPONG DRAWING TIM G3</h1>
+      <h1 className="app-title">E-sport DRAWING TIM G3</h1>
       <p style={{ textAlign: "center" }}>by dion rt ganteng</p>
       <div className="teamgen-container">
         <TeamGenerator />
         <h1 className="app-title">Bagan Tim</h1>
-        <div style={{ marginTop: 10 }}>
+        {/* <div style={{ marginTop: 10 }}>
           <iframe
             src="https://challonge.com/g3pingpongtournament/module"
             width="100%"
@@ -19,7 +19,7 @@ function App() {
             scrolling="auto"
             allowtransparency="true"
           ></iframe>
-        </div>
+        </div> */}
       </div>
     </div>
   );
