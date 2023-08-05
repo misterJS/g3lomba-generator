@@ -9,8 +9,8 @@ function App() {
       <p style={{ textAlign: "center" }}>by dion rt ganteng</p>
       <div className="teamgen-container">
         <TeamGenerator />
-        {/* <h1 className="app-title">Bagan Tim</h1> */}
-        {/* <div style={{ marginTop: 10 }}>
+        <h1 className="app-title">Bagan Tim Pingpong</h1>
+        <div style={{ marginTop: 10 }}>
           <iframe
             src="https://challonge.com/g3pingpongtournament/module"
             width="100%"
@@ -19,7 +19,16 @@ function App() {
             scrolling="auto"
             allowtransparency="true"
           ></iframe>
-        </div> */}
+          <h1 className="app-title">Bagan Tim E-sport</h1>
+          <iframe
+            src="https://challonge.com/g3football/module"
+            width="100%"
+            height="500"
+            frameborder="0"
+            scrolling="auto"
+            allowtransparency="true"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
