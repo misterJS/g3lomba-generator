@@ -8,7 +8,7 @@ function App() {
       <h1 className="app-title">E-sport DRAWING TIM G3</h1>
       <p style={{ textAlign: "center" }}>by dion rt ganteng</p>
       <div className="teamgen-container">
-        <TeamGenerator />
+        {/* <TeamGenerator /> */}
         <h1 className="app-title">Bagan Tim Pingpong</h1>
         <div style={{ marginTop: 10 }}>
           <iframe
@@ -23,7 +23,7 @@ function App() {
           <iframe
             src="https://challonge.com/g3football/module"
             width="100%"
-            height="500"
+            height="1000"
             frameborder="0"
             scrolling="auto"
             allowtransparency="true"
