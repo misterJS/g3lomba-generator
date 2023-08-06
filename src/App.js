@@ -5,10 +5,10 @@ import TeamGenerator from "./TeamGenerator";
 function App() {
   return (
     <div>
-      <h1 className="app-title">E-sport DRAWING TIM G3</h1>
-      <p style={{ textAlign: "center" }}>by dion rt ganteng</p>
+      <h1 className="app-title">Shuffle Orang agar masuk tim</h1>
+      <p style={{ textAlign: "center" }}>by dion</p>
       <div className="teamgen-container">
-        {/* <TeamGenerator /> */}
+        <TeamGenerator />
         <h1 className="app-title">Bagan Tim Pingpong</h1>
         <div style={{ marginTop: 10 }}>
           <iframe

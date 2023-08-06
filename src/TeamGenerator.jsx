@@ -5,7 +5,6 @@ import "./TeamGenerator.css";
 import LotteryAnimation from "./lottery.json";
 import lotterySfx from "./lottery.mp3";
 import { daftarBuah } from "./mock";
-import slotSfx from "./slot.mp3";
 import winSfx from "./win.mp3";
 
 const TeamGenerator = () => {
@@ -13,10 +12,6 @@ const TeamGenerator = () => {
   const [numTeams, setNumTeams] = useState(13);
   const [teams, setTeams] = useState([]);
   const [loading, setLoading] = useState(false);
-
-  const [playSlot] = useSound(slotSfx, {
-    interrupt: true,
-  });
 
   const [play, { stop }] = useSound(lotterySfx, {
     interrupt: true,
@@ -72,10 +67,6 @@ const TeamGenerator = () => {
   }, [loading]);
 
   const countplay = players.split(/\r?\n/);
-
-  const handleClick = () => {
-    playSlot();
-  };
 
   return (
     <div className="teamgen-wrapper" onClick={handleClick}>
