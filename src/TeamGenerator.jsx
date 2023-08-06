@@ -69,7 +69,7 @@ const TeamGenerator = () => {
   const countplay = players.split(/\r?\n/);
 
   return (
-    <div className="teamgen-wrapper" onClick={handleClick}>
+    <div className="teamgen-wrapper">
       <div className="leftdiv">
         <h2>List Pemain</h2>
         <label htmlFor="players">- Tulis namanya dibawah -</label>
